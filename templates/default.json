@@ -1,0 +1,47 @@
+{
+  "name": "default",
+  "description": "Balanced prompts for both web2 and web3 leanings.",
+  "sections": [
+    {
+      "label": "Research Focus",
+      "prompts": [
+        "What is the current gap I want to explore within this topic?",
+        "Who is already shipping in this area and what can I learn from their approach?",
+        "What metrics will signal that my exploration progressed?"
+      ]
+    },
+    {
+      "label": "Signal Collection",
+      "prompts": [
+        "List at least three authoritative sources (articles, videos, protocols) to bookmark.",
+        "Note one misconception or trap to avoid while collecting evidence.",
+        "What data fields or keywords do I need to harvest next?"
+      ]
+    },
+    {
+      "label": "Next Moves",
+      "prompts": [
+        "What quick experiment or prototype can I sketch today?",
+        "How will I document what worked and what failed?",
+        "What external voices should I cross-reference before moving forward?"
+      ]
+    }
+  ],
+  "variants": {
+    "quick": {
+      "focus": "high-level checkpoints",
+      "sections": [
+        "Research Focus",
+        "Next Moves"
+      ]
+    },
+    "deep": {
+      "focus": "full template",
+      "sections": [
+        "Research Focus",
+        "Signal Collection",
+        "Next Moves"
+      ]
+    }
+  }
+}

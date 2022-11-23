@@ -1,0 +1,14 @@
+{
+  "name": "trailquery-compass",
+  "version": "0.1.0",
+  "description": "A reference guide generator for solo researchers",
+  "type": "module",
+  "main": "src/cli.js",
+  "scripts": {
+    "guide": "node src/cli.js",
+    "template": "node src/template.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
