@@ -27,6 +27,8 @@ TrailQuery Compass is a solo reference-guide builder for topic explorers. It sti
 
 Every guide you generate is persisted under `journals/` with a timestamped filename. The CLI writes the section data, variant info, and creation timestamp so you can keep a lightweight log of every mini-burst of work before diving into the next evening's session.
 
+Use `npm run logs` to list the most recent entries with their variant and creation timestamp; it helps you quickly re-open or reference anything you sketched previously.
+
 ## Philosophy
 
 Personal projects happen in spare moments. TrailQuery Compass follows a slow-burn cadence: draft a guide, ship a quick commit, iterate later. Every artifact should feel like it was drafted in an evening with limitations on time but ambition high.

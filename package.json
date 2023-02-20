@@ -6,7 +6,8 @@
   "main": "src/cli.js",
   "scripts": {
     "guide": "node src/cli.js",
-    "template": "node src/template.js"
+    "template": "node src/template.js",
+    "logs": "node src/logs.js"
   },
   "engines": {
     "node": ">=18"
