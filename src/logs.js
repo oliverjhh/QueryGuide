@@ -39,7 +39,8 @@ async function main() {
         name,
         topic: journal.topic,
         variant: journal.variant,
-        createdAt: journal.createdAt
+        createdAt: journal.createdAt,
+        note: journal.note
       };
     })
   );
@@ -47,8 +48,14 @@ async function main() {
   items
     .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
     .forEach((entry) => {
+      const summaryNote =
+        entry.note && entry.note.length > 60
+          ? `${entry.note.slice(0, 57)}...`
+          : entry.note;
       console.log(
-        `${entry.name} · ${entry.topic} · ${entry.variant} · ${entry.createdAt}`
+        `${entry.name} · ${entry.topic} · ${entry.variant} · ${entry.createdAt}${
+          summaryNote ? ` · Note: ${summaryNote}` : ""
+        }`
       );
     });
 }

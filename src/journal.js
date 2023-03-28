@@ -24,6 +24,7 @@ export async function persistGuide(guide) {
     topic: guide.topic,
     variant: guide.variant,
     focus: guide.focus,
+    note: guide.note || null,
     sections: guide.sections,
     createdAt: guide.generatedAt
   };

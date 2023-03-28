@@ -29,6 +29,8 @@ Every guide you generate is persisted under `journals/` with a timestamped filen
 
 Use `npm run logs` to list the most recent entries with their variant and creation timestamp; it helps you quickly re-open or reference anything you sketched previously.
 
+Append `--note "mindset" ` to `npm run guide` to embed a quick session note, and it will show up in both the saved JSON and the log viewer output.
+
 ## Philosophy
 
 Personal projects happen in spare moments. TrailQuery Compass follows a slow-burn cadence: draft a guide, ship a quick commit, iterate later. Every artifact should feel like it was drafted in an evening with limitations on time but ambition high.

@@ -11,15 +11,22 @@ const options = args.reduce((acc, token, index) => {
   if (token === "--variant" && args[index + 1]) {
     acc.variant = args[index + 1];
   }
+  if (token === "--note" && args[index + 1]) {
+    acc.note = args[index + 1];
+  }
   return acc;
 }, { topic: null, variant: null });
 
 const guide = buildGuide(options.topic, options.variant);
+guide.note = options.note ? options.note.trim() : null;
 const journalPath = await persistGuide(guide);
 
 console.log(`TrailQuery Compass · ${guide.topic}`);
 console.log(`Variant: ${guide.variant} · Focus: ${guide.focus}`);
 console.log(`Timestamp: ${guide.generatedAt}`);
+if (guide.note) {
+  console.log(`Note: ${guide.note}`);
+}
 console.log("Journaled at:", journalPath);
 console.log("----");
 
