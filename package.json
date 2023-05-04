@@ -7,7 +7,8 @@
   "scripts": {
     "guide": "node src/cli.js",
     "template": "node src/template.js",
-    "logs": "node src/logs.js"
+    "logs": "node src/logs.js",
+    "export": "node src/export.js"
   },
   "engines": {
     "node": ">=18"

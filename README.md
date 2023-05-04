@@ -31,6 +31,8 @@ Use `npm run logs` to list the most recent entries with their variant and creati
 
 Append `--note "mindset" ` to `npm run guide` to embed a quick session note, and it will show up in both the saved JSON and the log viewer output.
 
+Run `npm run export` to turn the most recent journal entry into a markdown outline you can paste into docs or a Notion page.
+
 ## Philosophy
 
 Personal projects happen in spare moments. TrailQuery Compass follows a slow-burn cadence: draft a guide, ship a quick commit, iterate later. Every artifact should feel like it was drafted in an evening with limitations on time but ambition high.
