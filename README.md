@@ -33,6 +33,8 @@ Append `--note "mindset" ` to `npm run guide` to embed a quick session note, and
 
 Run `npm run export` to turn the most recent journal entry into a markdown outline you can paste into docs or a Notion page.
 
+If your evening is mostly about taking stock, pass `--variant reflect` so the Reflection section surfaces a recap of learnings alongside your next moves.
+
 ## Philosophy
 
 Personal projects happen in spare moments. TrailQuery Compass follows a slow-burn cadence: draft a guide, ship a quick commit, iterate later. Every artifact should feel like it was drafted in an evening with limitations on time but ambition high.

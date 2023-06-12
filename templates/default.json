@@ -25,6 +25,14 @@
         "How will I document what worked and what failed?",
         "What external voices should I cross-reference before moving forward?"
       ]
+    },
+    {
+      "label": "Reflection",
+      "prompts": [
+        "What unexpected observation still lingers after this session?",
+        "What assumption did I challenge, and what did that reveal?",
+        "Which follow-up question deserves a fresh ticket or reminder?"
+      ]
     }
   ],
   "variants": {
@@ -40,6 +48,14 @@
       "sections": [
         "Research Focus",
         "Signal Collection",
+        "Next Moves"
+      ]
+    },
+    "reflect": {
+      "focus": "lessons and next intentions",
+      "sections": [
+        "Research Focus",
+        "Reflection",
         "Next Moves"
       ]
     }
