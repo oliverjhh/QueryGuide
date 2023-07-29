@@ -35,6 +35,8 @@ Run `npm run export` to turn the most recent journal entry into a markdown outli
 
 If your evening is mostly about taking stock, pass `--variant reflect` so the Reflection section surfaces a recap of learnings alongside your next moves.
 
+The `npm run stats` command gives you a quick count of how many journals exist per variant and points to the most recent entry so you can track momentum at a glance.
+
 ## Philosophy
 
 Personal projects happen in spare moments. TrailQuery Compass follows a slow-burn cadence: draft a guide, ship a quick commit, iterate later. Every artifact should feel like it was drafted in an evening with limitations on time but ambition high.
