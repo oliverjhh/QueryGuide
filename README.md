@@ -40,3 +40,5 @@ The `npm run stats` command gives you a quick count of how many journals exist p
 ## Philosophy
 
 Personal projects happen in spare moments. TrailQuery Compass follows a slow-burn cadence: draft a guide, ship a quick commit, iterate later. Every artifact should feel like it was drafted in an evening with limitations on time but ambition high.
+
+For additional command details, see `docs/cli-usage.md`.
