@@ -37,6 +37,8 @@ If your evening is mostly about taking stock, pass `--variant reflect` so the Re
 
 The `npm run stats` command gives you a quick count of how many journals exist per variant and points to the most recent entry so you can track momentum at a glance.
 
+Pass `--template <name>` (for example `bot`) to load a different prompt bank, and run `npm run template` to see the available template names and their section breakdowns.
+
 ## Philosophy
 
 Personal projects happen in spare moments. TrailQuery Compass follows a slow-burn cadence: draft a guide, ship a quick commit, iterate later. Every artifact should feel like it was drafted in an evening with limitations on time but ambition high.

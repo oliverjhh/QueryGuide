@@ -1,0 +1,47 @@
+{
+  "name": "bot",
+  "description": "Prompts focused on prototyping helpers, automations, and playful bots.",
+  "sections": [
+    {
+      "label": "Trigger Story",
+      "prompts": [
+        "What user pain or repetitive task is this bot meant to defuse?",
+        "Where will this automation comfortably live (CLI, browser, mobile, hardware)?",
+        "What signals tell me the bot is behaving as expected?"
+      ]
+    },
+    {
+      "label": "Inputs & Signals",
+      "prompts": [
+        "Which sources should feed data into the bot, and how will they arrive?",
+        "List guardrails that keep the bot from acting on wrong or stale input.",
+        "What manual override will I keep handy during early testing?"
+      ]
+    },
+    {
+      "label": "Next Steps",
+      "prompts": [
+        "Can I sketch the happy path in under 15 minutes and move to a quick experiment?",
+        "Where will I capture logs or side notes so the next session picks up smoothly?",
+        "Which collaborators need a short update before I ship this to a personal toolbelt?"
+      ]
+    }
+  ],
+  "variants": {
+    "quick": {
+      "focus": "automated trigger sketch",
+      "sections": [
+        "Trigger Story",
+        "Next Steps"
+      ]
+    },
+    "deep": {
+      "focus": "full bot blueprint",
+      "sections": [
+        "Trigger Story",
+        "Inputs & Signals",
+        "Next Steps"
+      ]
+    }
+  }
+}

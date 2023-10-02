@@ -7,6 +7,7 @@ TrailQuery Compass exposes several lightweight helpers so each evening feels lik
 - `npm run guide -- --topic "<topic>"` — compile the default template, journal the result, and print the prompts.
 - `--variant` accepts `quick`, `deep`, or `reflect` to shift the tone of the prompts.
 - `--note` attaches a personal reminder to the journal entry for context later.
+- `--template` selects from `default` or any other supported template (for example `bot`) to swap the whole prompt layout.
 
 ## Explore templates and journals
 

@@ -26,7 +26,12 @@ async function main() {
     const records = await Promise.all(
       entries.map(async (name) => {
         const data = await readJournal(name);
-        return { name, variant: data.variant, createdAt: data.createdAt };
+        return {
+          name,
+          variant: data.variant,
+          template: data.template || "default",
+          createdAt: data.createdAt
+        };
       })
     );
 
@@ -34,6 +39,13 @@ async function main() {
     const variantCounts = new Map();
     records.forEach((record) => {
       variantCounts.set(record.variant, (variantCounts.get(record.variant) || 0) + 1);
+    });
+    const templateCounts = new Map();
+    records.forEach((record) => {
+      templateCounts.set(
+        record.template,
+        (templateCounts.get(record.template) || 0) + 1
+      );
     });
 
     const latest = records.reduce((current, candidate) =>
@@ -44,6 +56,10 @@ async function main() {
     console.log("Entries by variant:");
     variantCounts.forEach((count, variant) => {
       console.log(`  ${variant}: ${count}`);
+    });
+    console.log("Entries by template:");
+    templateCounts.forEach((count, templateName) => {
+      console.log(`  ${templateName}: ${count}`);
     });
     console.log(`Most recent entry: ${latest.name} (${latest.variant}) at ${latest.createdAt}`);
   } catch (err) {

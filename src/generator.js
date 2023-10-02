@@ -1,13 +1,14 @@
-import template from "../templates/default.json" assert { type: "json" };
+import { getTemplate, DEFAULT_TEMPLATE } from "./templates.js";
 
 const DEFAULT_VARIANT = "deep";
 
-function normalizeVariant(key) {
-  return key && template.variants[key] ? key : DEFAULT_VARIANT;
+function normalizeVariant(key, variants) {
+  return key && variants[key] ? key : DEFAULT_VARIANT;
 }
 
-export function buildGuide(topic, requestedVariant) {
-  const variantKey = normalizeVariant(requestedVariant);
+export function buildGuide(topic, requestedVariant, templateName = DEFAULT_TEMPLATE) {
+  const template = getTemplate(templateName);
+  const variantKey = normalizeVariant(requestedVariant, template.variants);
   const variant = template.variants[variantKey];
 
   const sections = template.sections
@@ -21,6 +22,7 @@ export function buildGuide(topic, requestedVariant) {
     topic: topic || "Untitled Trail",
     variant: variantKey,
     focus: variant.focus,
+    template: templateName,
     sections,
     generatedAt: new Date().toISOString()
   };

@@ -35,10 +35,12 @@ async function main() {
   const items = await Promise.all(
     entries.map(async (name) => {
       const journal = await readJournal(name);
+      const template = journal.template || "default";
       return {
         name,
         topic: journal.topic,
         variant: journal.variant,
+        template,
         createdAt: journal.createdAt,
         note: journal.note
       };
@@ -53,7 +55,7 @@ async function main() {
           ? `${entry.note.slice(0, 57)}...`
           : entry.note;
       console.log(
-        `${entry.name} · ${entry.topic} · ${entry.variant} · ${entry.createdAt}${
+        `${entry.name} · ${entry.template} · ${entry.topic} · ${entry.variant} · ${entry.createdAt}${
           summaryNote ? ` · Note: ${summaryNote}` : ""
         }`
       );

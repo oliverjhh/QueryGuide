@@ -1,8 +1,11 @@
 #!/usr/bin/env node
-import template from "../templates/default.json" assert { type: "json" };
+import { TEMPLATE_NAMES, getTemplate } from "./templates.js";
 
 console.log("Available Guide Templates:");
-console.log(`- ${template.name}: ${template.description}`);
-Object.entries(template.variants).forEach(([key, value]) => {
-  console.log(`  • ${key} → ${value.focus} (${value.sections.length} sections)`);
+TEMPLATE_NAMES.forEach((templateName) => {
+  const template = getTemplate(templateName);
+  console.log(`- ${templateName}: ${template.description}`);
+  Object.entries(template.variants).forEach(([key, value]) => {
+    console.log(`  • ${key} → ${value.focus} (${value.sections.length} sections)`);
+  });
 });

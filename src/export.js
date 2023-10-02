@@ -35,6 +35,7 @@ function toMarkdown(journal) {
   lines.push(`# ${journal.topic} · ${journal.variant}`);
   lines.push("");
   lines.push(`Generated: ${journal.createdAt}`);
+  lines.push(`Template: ${journal.template || "default"}`);
   if (journal.note) {
     lines.push(`Note: ${journal.note}`);
   }
