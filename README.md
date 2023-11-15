@@ -39,6 +39,8 @@ The `npm run stats` command gives you a quick count of how many journals exist p
 
 Pass `--template <name>` (for example `bot`) to load a different prompt bank, and run `npm run template` to see the available template names and their section breakdowns.
 
+For instructions on adding your own template JSON, see `docs/templates.md`.
+
 ## Philosophy
 
 Personal projects happen in spare moments. TrailQuery Compass follows a slow-burn cadence: draft a guide, ship a quick commit, iterate later. Every artifact should feel like it was drafted in an evening with limitations on time but ambition high.
